@@ -2,6 +2,7 @@ import express from "express";
 import pool from "../config/database.js";
 
 const app = express();
+// app.use("/images/arnolfini", express.static("assets/arnolfini-portrait"));
 
 app.get("/", async (_, res) => {
   try {
