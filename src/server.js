@@ -1,8 +1,10 @@
 import express from "express";
 import pool from "../config/database.js";
+import bodyParser from "body-parser";
+import dotenv from "dotenv";
 
 const app = express();
-// app.use("/images/arnolfini", express.static("assets/arnolfini-portrait"));
+app.use("/images", express.static("public/images"));
 
 app.get("/", async (_, res) => {
   try {
