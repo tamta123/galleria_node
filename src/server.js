@@ -2,8 +2,12 @@ import express from "express";
 import pool from "../config/database.js";
 import bodyParser from "body-parser";
 import dotenv from "dotenv";
+import cors from "cors"; //
+import bodyParser from "body-parser";
 
 const app = express();
+app.use(cors());
+app.use(bodyParser.json());
 app.use("/images", express.static("public/images"));
 
 app.get("/", async (_, res) => {
