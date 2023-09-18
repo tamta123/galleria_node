@@ -1,7 +1,7 @@
 import express from "express";
 import pool from "../config/database.js";
 import bodyParser from "body-parser";
-import cors from "cors"; //
+import cors from "cors";
 
 const app = express();
 app.use(cors());
